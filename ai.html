@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>AyouBot ChatAI</title>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script src="aiscript.js" defer></script>
+	<link rel="stylesheet" href="aistyle.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta name="keywords" content="HTML, CSS, JavaScript, ChatGPT, Chat bot, AI, OpenAI">
+	<meta name="description" content="Ask me anything">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<link rel="icon" type="image/png" sizes="300x250" href="https://cdn.discordapp.com/avatars/958746397753106496/21f251e595703353a7ee7eef1a9708ac.png?size=1024">
+	<meta name="author" content="activif">
+</head>
+<body>
+	<div class="titlebox">
+	    <img id="logo" src="icon.png" class="logo">
+	    <h1 class="title">AyouBot ChatAI</h1>
+    </div>
+	<div id="chat-window" class="convo"></div>
+	<div class="bottom">
+		<div class="promptbox">
+			<input autocomplete="off" type="text" id="input-box" class="input" onkeyup="buttonDisabler()">
+			</input>
+			<button onclick="sendUserInput()" class="button" id="button" disabled>
+				<i class="fa fa-send-o"></i></button>
+				
+		</div>
+		<div class="credits">
+			This bot was made by <a href="https://anlouf.github.io" target="_blank" style="color: #a8165f; text-decoration: none;">activif</a> using the <a href="https://openai.com/blog/openai-api" target="_blank" style="color: #a8165f; text-decoration: none;">OpenAI API</a>.
+		</div>
+	</div>
+</body>

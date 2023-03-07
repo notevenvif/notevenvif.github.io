@@ -1,0 +1,187 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1d1d1e;
+    min-height: 100vh;
+    white-space: pre-line;
+}
+
+.logo {
+    display: flex;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    transition-duration: 0.6s;
+}
+
+.logoafter {
+    display: flex;
+    width: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    float: left;
+    margin-top: 15px;
+    margin-left: 30px;
+    margin-right: -40px;
+    transition-duration: 0.6s;
+}
+
+.titlebox {
+    display: block;
+    width: 50vh;
+    margin-left: auto;
+    margin-right: auto;
+    transition-duration: 0.6s;
+}
+
+.title {
+    user-select: none;
+    color: #f0f0f0;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition-duration: 0.6s;
+}
+
+.credits {
+    margin-top: -25px;
+    color: #f0f0f0;
+    text-align: center;
+    user-select: none;
+}
+
+.bottom {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+}
+
+.promptbox {
+    height: 6vh;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.input {
+    font-size: 100%;
+    text-decoration: none;
+    border-style: none;
+    border-radius: 5px;
+    background-color: #2e2e2e;
+    height: 100%;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #f0f0f0;
+    box-shadow: 0px 0px 10px #111112;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.button {
+    z-index: 9999;
+    color: #f0f0f0;
+    background-color: #2e2e2e;
+    height: 30px;
+    width: 20px;
+    margin: -30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    opacity: 0.5;
+    display: none;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.convo {
+    display: block;
+    width: 50vw;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
+    transition-duration: 0.6s;
+    height: 66vh;
+    overflow-y: scroll;
+}
+
+.convo::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    transition-duration: 0.6s;
+}
+  
+.convo::-webkit-scrollbar-thumb {
+    background-color: #a8165f;
+    border-radius: 6px;
+    transition-duration: 0.6s;
+}
+  
+.convo::-webkit-scrollbar-thumb:hover {
+    background-color: #911754;
+    transition-duration: 0.6s;
+}
+  
+.convo::-webkit-scrollbar-track {
+    background-color: #1d1d1e;
+    transition-duration: 0.6s;
+}
+
+.convo.scroll-active::-webkit-scrollbar-track {
+    background-color: #0f0f0f;
+    transition-duration: 0.6s;
+  }
+
+.user {
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 0px;
+    font-weight: bold;
+    font-size: 110%;
+    color: black;
+    margin-top: 10px;
+    transition-duration: 0.6s;
+    margin-top: 5px;
+}
+
+.message {
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 0px;
+    padding-bottom: 5px;
+    color: white;
+    margin-top: 10px;
+    transition-duration: 0.6s;
+}
+
+@media only screen and (max-width: 480px) {
+    .convo {
+        height: 62vh;
+        width: 80vw;
+    }
+
+    .promptbox {
+        width: 80vw;
+    }
+}
