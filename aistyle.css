@@ -270,4 +270,13 @@ a:link {
     .adtexttwo {
         visibility: hidden;
     }
+    
+    .adboxone {
+        height: 14vh;
+    }
+
+    .adboxtwo {
+        height: 14vh;
+        margin-top: 20vh;
+    }
 }
