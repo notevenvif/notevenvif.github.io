@@ -1,7 +1,21 @@
 const chatWindow = document.getElementById('chat-window');
 const inputBox = document.getElementById('input-box');
+let chat_log = ["AyouBot: Hi there how can I help you?"];
+
 function sendUserInput() {
+
+
+console.log(chat_log)
+
+
 const userInput = inputBox.value;
+let context = chat_log.join("\n");
+let prompt = `${context}\nUser: ${userInput}`;
+
+
+console.log(prompt)
+
+
 inputBox.value = '';
 
   appendMessage('You', userInput);
@@ -13,7 +27,7 @@ inputBox.value = '';
       Authorization: `Bearer ${lmifta7hh()}`,
     },
     body: JSON.stringify({
-      prompt: userInput,
+      prompt: prompt,
       max_tokens: 1024,
       temperature: 0.7,
     }),
@@ -21,7 +35,13 @@ inputBox.value = '';
   .then((response) => response.json())
   .then((data) => {
     const generatedText = data.choices[0].text;
-    appendMessage('AyouBot', generatedText);
+    appendMessage('AyouBot', generatedText.replace("AyouBot: ", "").replace("Bot: ", "").replace("AI: ", ""));
+    if (prompt.length<=1024) {
+      chat_log.push(`User: ${userInput}`)
+      chat_log.push(generatedText)
+    } else {
+      chat_log.length = 0;
+    }
   })
   .catch(error => console.log(error));
 }
