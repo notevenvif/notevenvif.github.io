@@ -6,7 +6,7 @@ inputBox.value = '';
 
   appendMessage('You', userInput);
 
-  fetch("https://api.openai.com/v1/engines/text-davinci-002/completions", {
+  fetch("https://api.openai.com/v1/engines/text-davinci-003/completions", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
