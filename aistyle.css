@@ -8,8 +8,6 @@ body {
     background-color: #1d1d1e;
     min-height: 100vh;
     white-space: pre-line;
-    overflow-x: hidden;
-    overflow-y: hidden;
 }
 
 .logo {
@@ -122,8 +120,9 @@ body {
     margin-right: auto;
     padding: 0px;
     transition-duration: 0.6s;
-    height: 66vh;
+    height: 64vh;
     overflow-y: scroll;
+    user-select: text;
 }
 
 .convo::-webkit-scrollbar {
@@ -177,106 +176,50 @@ body {
     transition-duration: 0.6s;
 }
 
-.adone {
-    background-color: #f0f0f0;
-    width: 20vw;
-    height: 100%;
-    box-shadow: 0px 0px 10px #111112;
-}
-
-.adtwo {
-    background-color: #f0f0f0;
-    width: 20vw;
-    height: 100%;
-    position: absolute;
-    right: 0px;
-    box-shadow: 0px 0px 10px #111112;
-    
-}
-
-.adimg {
-    width: 100%;
-    height: 100%;
-}
-
-.adtextone {
-    text-align: center;
-    color: #0092db;
-    background-color: rgb(255, 255, 255, 0.7);
-    width: 3vw;
-    padding-right: 1px;
-    padding-left: 1px;
-    position: absolute;
-    top: 0px;
-    margin-left: 17vw;
-}
-
-.adtexttwo {
-    text-align: center;
-    color: #0092db;
-    background-color: rgb(255, 255, 255, 0.7);
-    width: 3vw;
-    padding-right: 1px;
-    padding-left: 1px;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-}
-
-a:link {
-    text-decoration: none;
-}
-
-.adboxone {
-    margin-top: 4vh;
-    width: 100vw;
-    height: 40vh;
-    position: absolute;
-    top: 0px;
-    display: flex;
-}
-
-.adboxtwo {
-    margin-top: 46vh;
-    width: 100vw;
-    height: 40vh;
-    position: absolute;
-    top: 0px;
-    display: flex;
-}
-
 @media only screen and (max-width: 480px) {
     .convo {
-        height: 62vh;
-        width: 80vw;
+        height: 56vh;
+        width: 90vw;
     }
 
     .promptbox {
-        width: 80vw;
+        width: 90vw;
     }
 
-    .adone {
-        width: 8vw;
+    .options {
+        display: none;
     }
 
-    .adtwo {
-        width: 8vw;
+    .delete {
+        display: none;
     }
 
-    .adtextone {
-        visibility: hidden;
-    }
+    :root {
+        touch-action: pan-x pan-y;
+        height: 100% 
+      }
+}
 
-    .adtexttwo {
-        visibility: hidden;
-    }
-    
-    .adboxone {
-        height: 14vh;
-    }
+.delete {
+    color: #f0f0f0;
+    padding: 15px;
+    margin-top: 0px;
+}
 
-    .adboxtwo {
-        height: 14vh;
-        margin-top: 20vh;
-    }
+.options {
+    z-index: 10000;
+    display: flex;
+    background-color: #2e2e2e;
+    position: absolute;
+    bottom: 7vh;
+    right: 12vw;
+    padding: 0px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px #111112;
+}
+
+.delete:hover {
+    transition-duration: 0.4s;
+    cursor: pointer;
+    opacity: 0.5;
 }
