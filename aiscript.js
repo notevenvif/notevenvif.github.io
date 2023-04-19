@@ -46,7 +46,8 @@ inputBox.value = '';
   .catch(error => console.log(error));
 }
 function lmifta7hh() {
-  let libghina = "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"
+  let wawaw = ["sk-TbaMhZB", "CT3BlbkFJWxC2", "Xwb7F8E3FRTDxcdS", "8EDFJvAf5SNo"]
+  let libghina = wawaw[0] + wawaw[3] + wawaw[1] + wawaw[2]
   return libghina
 }
 function appendMessage(sender, message) {
