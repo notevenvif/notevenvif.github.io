@@ -46,13 +46,7 @@ inputBox.value = '';
   .catch(error => console.log(error));
 }
 function lmifta7hh() {
-  let mifta7on_hh = ["zdtuXygFBv", "sk-njjmdt", "NCIKAKqphe", "FJmwRJRU5R", "cQ6dT3Blbk", "jhdmiuMDK", "54sgerghhoi", "nfqmuigcq14"]
-  let num = 76
-  let dakchy = mifta7on_hh[1] + '$' + mifta7on_hh[2] + '$' + mifta7on_hh[4]
-  let wa79rb = dakchy + '$' + mifta7on_hh[3] + "$" + mifta7on_hh[0]
-  const ibabakchvv = wa79rb + `$${num}`
-  const list = ibabakchvv.split("$")
-  const libghina = list.join("")
+  let libghina = "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"
   return libghina
 }
 function appendMessage(sender, message) {
